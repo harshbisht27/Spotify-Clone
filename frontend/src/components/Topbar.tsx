@@ -20,13 +20,13 @@ const Topbar = () => {
         <img src="/spotify.png" className="size-8" alt="Spotify logo" />
         Spotify
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 text-black">
         {isAdmin && (
           <Link
             to={"/admin"}
             className={cn(buttonVariants({ variant: "outline" }))}
           >
-            <LayoutDashboardIcon className="size-4  mr-2" />
+            <LayoutDashboardIcon className="size-4 text-black mr-2" />
             Admin Dashboard
           </Link>
         )}
