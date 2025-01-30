@@ -106,9 +106,9 @@ const AddSongDialog = () => {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="bg-zinc-900 border-zinc-700 max-h-[80vh] overflow-auto">
+      <DialogContent className="bg-zinc-900  border-zinc-700 max-h-[80vh] overflow-auto">
         <DialogHeader>
-          <DialogTitle>Add New Song</DialogTitle>
+          <DialogTitle className=" text-white ">Add New Song</DialogTitle>
           <DialogDescription>
             Add a new song to your music library
           </DialogDescription>
@@ -168,7 +168,7 @@ const AddSongDialog = () => {
 
           {/* Audio upload */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">Audio File</label>
+            <label className="text-sm text-white font-medium">Audio File</label>
             <div className="flex items-center gap-2">
               <Button
                 variant="outline"
@@ -184,29 +184,29 @@ const AddSongDialog = () => {
 
           {/* other fields */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">Title</label>
+            <label className="text-sm text-white font-medium">Title</label>
             <Input
               value={newSong.title}
               onChange={(e) =>
                 setNewSong({ ...newSong, title: e.target.value })
               }
-              className="bg-zinc-800 border-zinc-700"
+              className="bg-zinc-800 text-white border-zinc-700"
             />
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Artist</label>
+            <label className="text-sm text-white font-medium">Artist</label>
             <Input
               value={newSong.artist}
               onChange={(e) =>
                 setNewSong({ ...newSong, artist: e.target.value })
               }
-              className="bg-zinc-800 border-zinc-700"
+              className="bg-zinc-800 text-white border-zinc-700"
             />
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Duration (seconds)</label>
+            <label className="text-sm text-white font-medium">Duration (seconds)</label>
             <Input
               type="number"
               min="0"
@@ -214,22 +214,22 @@ const AddSongDialog = () => {
               onChange={(e) =>
                 setNewSong({ ...newSong, duration: e.target.value || "0" })
               }
-              className="bg-zinc-800 border-zinc-700"
+              className="bg-zinc-800 text-white border-zinc-700"
             />
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Album (Optional)</label>
+            <label className="text-sm text-white font-medium">Album (Optional)</label>
             <Select
               value={newSong.album}
               onValueChange={(value) =>
                 setNewSong({ ...newSong, album: value })
               }
             >
-              <SelectTrigger className="bg-zinc-800 border-zinc-700">
+              <SelectTrigger className="bg-zinc-800 text-white border-zinc-700">
                 <SelectValue placeholder="Select album" />
               </SelectTrigger>
-              <SelectContent className="bg-zinc-800 border-zinc-700">
+              <SelectContent className="bg-zinc-800 text-white border-zinc-700">
                 <SelectItem value="none">No Album (Single)</SelectItem>
                 {albums.map((album) => (
                   <SelectItem key={album._id} value={album._id}>
